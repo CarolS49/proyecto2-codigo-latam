@@ -1,0 +1,202 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@400;700&family=Griffy&family=Lato:wght@400;700&family=WindSong&display=swap');
+
+/*reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;  /* la propiedad CSS scroll-behavior: smooth se aplica a html, lo que hace que todos los desplazamientos dentro del documento sean suaves. */
+    line-height: 1.2;
+}
+
+body {
+    background: no-repeat center/100% 100% url("../fondo/la_torre_eiffel.jpg");
+    font-family: 'Lato', sans-serif;
+}
+
+/*..............ESTILOS BARRA DE NAVEGACION...........*/
+header {
+    height: 90px;
+}
+
+header nav{
+    background: top/100%  url('../fondo/barco_fantasma.jpg');
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;  /* para dejar la barra de navegacion fija ,asi la pagina se mueva*/
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 250, 0.5);
+}
+
+nav ul {
+    display: none;  /*Para ocultar la lista en pantallas de celular o table*/
+    list-style: none;  /* Para quitar los puntos a los items de listas */
+}
+
+nav li {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    
+}
+
+nav li:hover {
+    background-color: #af599e;/* Cambia el color de fondo al pasar el mouse */
+}
+
+nav a{
+    text-decoration: none;  /* Para que los enlaces hereden el color de texto y no tengan subrayado */
+    color: white;
+}
+
+#menu-toggle{  /*estilos del boton menu*/
+  display: inline-block; 
+  background: none;
+  margin-right: 50px;
+  color: white;
+  border: none;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show{   /*estilos de la lista con clase show cuando se activa el boton menu*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+
+}
+
+
+/*...............ESTILOS DEL CUERPO PRINCIPAL.................*/
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 90%;  
+    margin: auto;  /*el margin: auto; para tenerlo centrado fácilmente*/
+}
+
+section {
+    scroll-margin-top: 90px; /* se utiliza la propiedad scroll-margin-top en las secciones para ajustar el desplazamiento y tener en cuenta el espacio del menú de navegación fijo en la parte superior.  */
+    transition: margin-top 0.3s; /* También se agrega una transición suave al ajustar el margen superior (margin-top) de las secciones para crear una animación fluida. */
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2{
+    padding: 10px;
+    font-size: 28px;
+}
+
+p {
+    padding: 20px 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#foto {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-radius: 50%;
+    width:300px;       
+}
+
+#curriculum {  /* Estilos del botón "Descargar mi CV" */
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #af599e;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fbfbfb;
+    text-decoration: none;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 250, 0.5);
+}
+
+#curriculum:hover {
+    background-color: #c997bf; /* Cambia el color de fondo al pasar el mouse */
+    color: #fbfbfb; /* Cambia el color del texto al pasar el mouse */
+}
+
+#articulo2 {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(215, 202, 212, 0.3);
+    border-radius: 5px;
+}
+
+#contacto {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#contacto i{
+    display: inline-block;
+    padding: 10px;  
+
+}
+
+#contacto img{
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 250, 0.5);
+}
+#contacto img:hover{
+    background-color: white;
+}
+
+/*.........ESTILOS PARA EL FOOTER........*/
+
+footer {
+    background:  bottom/100% url('../fondo/barco_fantasma.jpg'); /*con el top coloco la parte superior de la imagen y le pongo ancho 100% de toda la pagina*/
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    color: #fbfbfb;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+
+/*media querys para pantalla de PC */
+@media (min-width: 1024px){
+    #inicio1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+    }
+   
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 34px;
+    }
+
+    #menu-toggle{
+        display: none;
+    }
+    nav ul{
+        display: inline-block;
+    }
+    
+}
+
+
